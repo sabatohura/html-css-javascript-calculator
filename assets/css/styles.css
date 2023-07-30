@@ -1,4 +1,5 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap');
+:root {
     --b-filter-1 : blur(5.5px);
     --b-filter-2 : blur(4px);
     --body-background : linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
@@ -60,6 +61,7 @@ body{
     padding: 20px;
     text-align: right;
     width: 326px;
+    font-weight: 6 00;
 }
 .calc-button-row {
     display: flex;
