@@ -36,7 +36,7 @@ const handleSymbol = symbol => {
             }
             break;
         case '+':
-        case '-':
+        case '−':
         case '×':
         case '/':
             handleMath(symbol);
@@ -62,7 +62,7 @@ const handleMath = symbol => {
 const flushOperation = intBuffer => {
     if (previousOperator === '+') {
         runningTotal += intBuffer;
-    } else if(previousOperator === '-') {
+    } else if(previousOperator === '−') {
         runningTotal -= intBuffer;
     }else if(previousOperator === '×') {
         runningTotal *= intBuffer;
