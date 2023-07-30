@@ -1,3 +1,15 @@
+:root{
+    --b-filter-1 : blur(5.5px);
+    --b-filter-2 : blur(4px);
+    --body-background : linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+    --color-one : rgba(35, 35, 35, 0.1);
+    --color-two: rgba(255, 255, 255, 0.30);
+    --color-three: rgba(255, 255, 255, 0.34);
+    --color-four: rgba(255, 255, 255, 0.01);
+    --color-five: rgba(255, 255, 255, 0.75);
+    --text-color : #232323;
+}
+
 html {
     box-sizing: border-box;
     height: 100%;
@@ -13,40 +25,86 @@ html {
 
 body{
     align-items: center;
-    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+    background: var(--body-background);
     display: flex;
-    font-family: 'Dosis', sans-serif;
+    font-family:'Dosis', sans-serif;
     font-display: swap;
     height: inherit;
     justify-content: center;
 }
 
 .wrapper {
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: var(--b-filter-1);
+    -webkit-backdrop-filter: var(--b-filter-1);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    color: #232323;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, 0.30);
-    border: 1px solid rgba(255, 255, 255, 0.34);
+    box-shadow: 0 4px 30px var(--color-one);
+    color: var(--text-color);
+    backdrop-filter: var(--b-filter-2);
+    -webkit-backdrop-filter: var(--b-filter-2);
+    background: var(--color-two);
+    border: 1px solid var(--color-three);
     flex-basis: 400px;
     height: 540px;
     padding: 20px 34px;
 }
 .screen {
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.01);
+    backdrop-filter: var(--b-filter-1);
+    -webkit-backdrop-filter: var(--b-filter-1);
+    background: var(--color-five);
+    border: 1px solid var(--color-four);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    color: #232323;
+    box-shadow: 0 4px 30px var(--color-one);
+    color: var(--text-color);
     font-size: 35px;
     overflow: auto;
     padding: 20px;
     text-align: right;
     width: 326px;
 }
+.calc-button-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
 
+.calc-button {
+    backdrop-filter: var(--b-filter-1);
+    -webkit-backdrop-filter: var(--b-filter-1);
+    background: var(--color-five);
+    border: 1px solid var(--color-four);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px var(--color-one);
+    color: var(--text-color);
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 24px;
+    height: 65px;
+}
+.calc-button:last-child {
+    backdrop-filter: var(--b-filter-1);
+    -webkit-backdrop-filter: var(--b-filter-1);
+    background: var(--color-five);
+    border: 1px solid var(--color-four);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px var(--color-one);
+    color: #fff;
+    background:#d72 ;
+}
+.calc-button:last-child:hover {
+    color: inherit;
+    background-color: inherit;
+}
+
+.calc-button:hover {
+    background-color: inherit;
+
+}
+.calc-button:active {
+    background-color: #ffef78;
+}
+.triple {
+    flex-basis:72% ;
+}
+.double {
+    flex-basis: 47%;
+}
